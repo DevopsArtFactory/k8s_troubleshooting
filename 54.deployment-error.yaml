@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-hello-world
-        image: javalove93/flask-hello-world
+        image: kshooter2000/flask-hello-world
         resources:
           limits:
             memory: "256Mi"

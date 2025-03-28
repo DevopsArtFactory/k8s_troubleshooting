@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello-and-exit
-        image: javalove93/hello
+        image: kshooter2000/hello
         resources:
           limits:
             memory: "256Mi"

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello-without-shell
-        image: javalove93/hello-without-shell
+        image: kshooter2000/hello-without-shell
         resources:
           limits:
             memory: "256Mi"

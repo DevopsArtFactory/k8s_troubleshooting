@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: spring-boot-docker
-        image: javalove93/spring-boot-docker-notexist
+        image: kshooter2000/spring-boot-docker-notexist
         resources:
           limits:
             memory: "256Mi"

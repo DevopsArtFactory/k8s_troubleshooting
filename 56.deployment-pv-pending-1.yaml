@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello-http-server
-        image: javalove93/hello-http-server
+        image: kshooter2000/hello-http-server
         resources:
           limits:
             memory: "256Mi"

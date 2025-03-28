@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: spring-boot-docker
-        image: javalove93/spring-boot-docker
+        image: kshooter2000/spring-boot-docker
         resources:
           limits:
             memory: "32Mi"
@@ -22,7 +22,7 @@ spec:
         ports:
         - containerPort: 8080
       - name: hello-http-server
-        image: javalove93/hello-http-server
+        image: kshooter2000/hello-http-server
         resources:
           limits:
             memory: "256Mi"

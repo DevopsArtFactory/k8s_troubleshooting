@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: spring-boot-docker
-        image: javalove93/spring-boot-docker-mem1g
+        image: kshooter2000/spring-boot-docker-mem1g
         resources:
           requests:
             memory: "100Mi"
