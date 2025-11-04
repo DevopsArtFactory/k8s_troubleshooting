@@ -1,0 +1,29 @@
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+  name: online-boutique-k6-load-test
+  namespace: litmus
+spec:
+  engineState: 'active'
+  appinfo:
+    appns: 'boutique' # Online Boutique 애플리케이션 네임스페이스
+    applabel: 'app=frontend' # Online Boutique 프론트엔드 레이블
+    appkind: 'deployment'
+  chaosServiceAccount: litmus-admin
+  experiments:
+    - name: k6-load-generator
+      spec:
+        components:
+          env:
+            # k6 부하 테스트 스크립트가 담긴 시크릿
+            - name: K6_SCRIPT
+              valueFrom:
+                secretKeyRef:
+                  name: k6-load-test
+                  key: load-test.js
+
+            # k6 부하 테스트 옵션
+            - name: LIB_IMAGE
+              value: 'grafana/k6:latest'
+            - name: TOTAL_CHAOS_DURATION
+              value: '60' # 전체 실험 시간 (초)
